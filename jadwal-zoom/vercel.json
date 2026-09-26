@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.7.2"
+    }
+  },
+  "routes": [
+    { "src": "/", "dest": "/api/index.php" },
+    { "src": "/login", "dest": "/api/login.php" },
+    { "src": "/logout", "dest": "/api/logout.php" },
+    { "src": "/dashboard", "dest": "/api/dashboard.php" },
+    { "src": "/jadwal/(.*)", "dest": "/api/jadwal/$1" },
+    { "src": "/jurusan/(.*)", "dest": "/api/jurusan/$1" },
+    { "src": "/prodi/(.*)", "dest": "/api/prodi/$1" },
+    { "src": "/users/(.*)", "dest": "/api/users/$1" },
+    { "src": "/kalender/(.*)", "dest": "/api/kalender/$1" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/uploads/(.*)", "dest": "/uploads/$1" },
+    { "src": "/(.*)\\.php", "dest": "/api/$1.php" }
+  ]
+}
